@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разбор Теста по Физике</title>
+    <style>
+        /* --- Общие стили --- */
+        html {
+            scroll-behavior: smooth; /* Плавная прокрутка */
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 80px 20px 20px 20px; /* Добавлен отступ сверху для навигационной панели */
+        }
+
+        /* --- Навигационная панель --- */
+        .navigation-bar {
+            position: fixed; /* или 'sticky' */
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* --- Основной контейнер --- */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* --- Заголовки --- */
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #3498db;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+            scroll-margin-top: 80px; /* Отступ для якоря, чтобы заголовок не прятался под панелью */
+        }
+
+        h3 {
+            color: #2980b9;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        /* --- Блок с вопросом --- */
+        .question-block {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-left: 4px solid #bdc3c7;
+            background-color: #fdfdfd;
+            border-radius: 0 8px 8px 0;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .question-block:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+        }
+
+        /* --- Список с решением --- */
+        .question-block ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .question-block li {
+            margin-bottom: 8px;
+        }
+
+        /* --- Выделение ответа --- */
+        .answer-highlight {
+            background-color: #e8f6ef;
+            color: #1e8449;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 5px;
+            border: 1px solid #a9dfbf;
+        }
+
+        /* --- Форматирование формул --- */
+        .formula {
+            font-family: "Consolas", "Menlo", "Courier New", monospace;
+            background-color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+
+        /* --- Адаптивный дизайн для телефонов --- */
+        @media (max-width: 768px) {
+            body {
+                padding: 70px 10px 10px 10px;
+            }
+
+            .container {
+                padding: 15px;
+                border-radius: 8px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+                scroll-margin-top: 70px;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+            
+            .nav-button {
+                padding: 8px 15px;
+                margin: 5px 3px;
+                font-size: 0.9em;
+            }
+            .navigation-bar{
+                display:flex;
+                flex-wrap:wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navigation-bar">
+        <a href="#variant-1" class="nav-button">Вариант 1</a>
+        <a href="#variant-2" class="nav-button">Вариант 2</a>
+        <a href="#variant-3" class="nav-button">Вариант 3</a>
+        <a href="#variant-4" class="nav-button">Вариант 4</a>
+    </div>
+
+    <div class="container">
+        <h1>Разбор Теста по Физике: Оптика и Атомная Физика</h1>
+
+        <!-- ==================== ВАРИАНТ 1 ==================== -->
+        <h2 id="variant-1">Вариант 1</h2>
+        
+        <div class="question-block">
+            <h3>1. Гармонические колебания</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">x = Acos(ωt)</span>. При фазе <span class="formula">φ = π/3</span> смещение <span class="formula">x = 3 см</span>. Найти амплитуду <span class="formula">A</span>.</li>
+                <li><strong>Решение:</strong> Подставляем значения в <span class="formula">x = Acos(φ)</span>: <span class="formula">3 = A · cos(π/3)</span>. Так как <span class="formula">cos(π/3) = 1/2</span>, получаем <span class="formula">3 = A · (1/2)</span>. Отсюда <span class="formula">A = 3 · 2 = 6 см</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">6 см</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>2. Максимальная длина звуковой волны</h3>
+            <ul>
+                <li><strong>Условие:</strong> Диапазон слышимости 20 - 20'000 Гц. Скорость звука <span class="formula">V<sub>з</sub> = 340 м/с</span>. Найти <span class="formula">λ<sub>max</sub></span>.</li>
+                <li><strong>Решение:</strong> Длина волны <span class="formula">λ = V / ν</span>. Максимальная длина волны соответствует минимальной частоте (<span class="formula">ν<sub>min</sub> = 20 Гц</span>). <span class="formula">λ<sub>max</sub> = 340 м/с / 20 Гц = 17 м</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">17 м</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>3. Разность фаз</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">λ = 0,6 мкм</span>, разность хода <span class="formula">Δl = 0,6 мкм</span>. Найти разность фаз <span class="formula">Δφ</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">Δφ = (2π / λ) · Δl = (2π / 0,6) · 0,6 = 2π</span>. По условию записываем как 2п.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">2п</span></li>
+            </ul>
+        </div>
+        
+        <div class="question-block">
+            <h3>4. Дифракция Френеля на диске</h3>
+            <ul>
+                <li><strong>Условие:</strong> Непрозрачный диск закрывает две первые зоны Френеля. <span class="formula">I<sub>0</sub></span> — интенсивность падающей волны. Найти интенсивность <span class="formula">I</span> в центре.</li>
+                <li><strong>Решение:</strong> В центре дифракционной картины за диском наблюдается пятно Пуассона-Араго. Если закрыты первые <span class="formula">k</span> зон, амплитуда в центре <span class="formula">A ≈ A<sub>k+1</sub>/2</span>. Здесь <span class="formula">k=2</span>, <span class="formula">A ≈ A<sub>3</sub>/2</span>. Так как <span class="formula">A<sub>3</sub> ≈ A<sub>1</sub></span>, а амплитуда от всей волны <span class="formula">A<sub>0</sub> = A<sub>1</sub>/2</span>, то <span class="formula">A ≈ A<sub>0</sub></span>. Следовательно, <span class="formula">I ≈ I<sub>0</sub></span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Б) I = I₀</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>5. Дифракция на щели</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">λ = 410 нм</span>, <span class="formula">b = 20,5 мкм</span>, <span class="formula">θ = 30°</span>. Найти порядок минимума <span class="formula">m</span>.</li>
+                <li><strong>Решение:</strong> Условие минимума: <span class="formula">b · sin(θ) = m · λ</span>. Отсюда <span class="formula">m = (b · sin(θ)) / λ = (20,5·10⁻⁶ · sin(30°)) / (410·10⁻⁹) = (20,5·10⁻⁶ · 0,5) / (410·10⁻⁹) = 25</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Г) m = 25</span></li>
+            </ul>
+        </div>
+        
+        <div class="question-block">
+            <h3>6. Период дифракционной решетки</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">N₀ = 625</span> штрихов на <span class="formula">L = 1 мм</span>. Найти период <span class="formula">d</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">d = L / N₀ = 1 мм / 625 = 0,0016 мм = 1,6 мкм</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Б) d = 1,6 мкм</span></li>
+            </ul>
+        </div>
+        
+        <div class="question-block">
+            <h3>7. Закон Малюса</h3>
+            <ul>
+                <li><strong>Условие:</strong> Интенсивность уменьшилась в 4 раза. Найти угол <span class="formula">α</span> между поляризатором и анализатором.</li>
+                <li><strong>Решение:</strong> <span class="formula">I₁ = I<sub>ест</sub> / 2</span>. <span class="formula">I₂ = I₁ · cos²(α) = (I<sub>ест</sub> / 2) · cos²(α)</span>. По условию <span class="formula">I₂ = I<sub>ест</sub> / 4</span>. <span class="formula">I<sub>ест</sub> / 4 = (I<sub>ест</sub> / 2) · cos²(α) → cos²(α) = 1/2 → α = 45°</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">B) 45°</span></li>
+            </ul>
+        </div>
+        
+        <div class="question-block">
+            <h3>8. Закон Стефана-Больцмана</h3>
+            <ul>
+                <li><strong>Условие:</strong> Температура <span class="formula">T</span> увеличилась в 2 раза. Как изменилась площадь под графиком?</li>
+                <li><strong>Решение:</strong> Площадь под графиком (интегральная светимость) <span class="formula">R ∝ T⁴</span>. Если <span class="formula">T₂ = 2T₁</span>, то <span class="formula">R₂ ∝ (2T₁)⁴ = 16T₁⁴</span>. Площадь увеличится в 16 раз.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Увеличится в 16 раз</span></li>
+            </ul>
+        </div>
+        
+        <div class="question-block">
+            <h3>9. Перевод эВ в Джоули</h3>
+            <ul>
+                <li><strong>Условие:</strong> Работа выхода <span class="formula">А<sub>вых</sub> = 2,5 эВ</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">А<sub>вых</sub> = 2,5 · (1,6 · 10⁻¹⁹ Дж) = 4,0 · 10⁻¹⁹ Дж</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Г) 4·10⁻¹⁹ Дж</span></li>
+            </ul>
+        </div>
+        
+        <div class="question-block">
+            <h3>10. Волна де Бройля</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">m = 10⁻⁹ кг</span>, <span class="formula">λ<sub>д</sub> = 6,63·10⁻³⁰ м</span>. Во сколько раз <span class="formula">v < c</span>?</li>
+                <li><strong>Решение:</strong> <span class="formula">v = h / (m · λ<sub>д</sub>) = (6,63·10⁻³⁴) / (10⁻⁹ · 6,63·10⁻³⁰) = 10⁵ м/с</span>. Отношение <span class="formula">c / v = (3·10⁸) / (10⁵) = 3000</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Д) В 3000 раз</span></li>
+            </ul>
+        </div>
+        
+        <div class="question-block">
+            <h3>11. Радиусы орбит в атоме Бора</h3>
+            <ul>
+                <li><strong>Условие:</strong> Найти отношение <span class="formula">r₄ / r₂</span> (<span class="formula">n=4</span> к <span class="formula">n=2</span>).</li>
+                <li><strong>Решение:</strong> <span class="formula">r<sub>n</sub> ∝ n²</span>. Отношение <span class="formula">r₄ / r₂ = 4² / 2² = 16 / 4 = 4</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">E) 4</span></li>
+            </ul>
+        </div>
+        
+        <div class="question-block">
+            <h3>12. Максимумы вероятности в потенциальной яме</h3>
+            <ul>
+                <li><strong>Условие:</strong> Электрон в состоянии <span class="formula">n=3</span>. Найти координаты максимумов.</li>
+                <li><strong>Решение:</strong> Максимумы плотности вероятности (пучности) для <span class="formula">n=3</span> находятся в точках <span class="formula">x = a/6, x = a/2, x = 5a/6</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">В) x₁=a/6; x₂=a/2; x₃=5a/6</span></li>
+            </ul>
+        </div>
+        
+        <div class="question-block">
+            <h3>13. Вероятность нахождения в потенциальной яме</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">n=3</span>, яма шириной <span class="formula">l</span>. Вероятность в интервале <span class="formula">(l/3, 2l/3)</span>.</li>
+                <li><strong>Решение:</strong> График плотности вероятности для <span class="formula">n=3</span> имеет 3 симметричных "горба" равной площади. Интервал <span class="formula">(l/3, 2l/3)</span> точно соответствует центральному "горбу". Вероятность равна <span class="formula">1/3</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Б) 1/3</span></li>
+            </ul>
+        </div>
+        
+        <div class="question-block">
+            <h3>14. Радиоактивные распады</h3>
+            <ul>
+                <li><strong>Условие:</strong> Превращение <span class="formula">²³⁵₉₂U → ²⁰⁷₈₂Pb</span>. Найти число α- и β⁻-распадов.</li>
+                <li><strong>Решение:</strong> α-распады: <span class="formula">x = (235 - 207) / 4 = 7</span>. β⁻-распады: <span class="formula">92 = 82 + 2·7 - y → 92 = 96 - y → y = 4</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">B) 7α и 4β</span></li>
+            </ul>
+        </div>
+        
+        <div class="question-block">
+            <h3>15. Период полураспада</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">T = 20 мин</span>, <span class="formula">m₀ = 40 г</span>. Найти массу через 1 час (60 мин).</li>
+                <li><strong>Решение:</strong> Пройдет <span class="formula">n = 60/20 = 3</span> периода. Масса уменьшится в <span class="formula">2³ = 8</span> раз. <span class="formula">m = 40 г / 8 = 5 г</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Д) 5 г</span></li>
+            </ul>
+        </div>
+        
+        <div class="question-block">
+            <h3>16. Ядерная реакция</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">¹⁰B + n → ⁷Li + X</span>. Определить Х и число нейтронов.</li>
+                <li><strong>Решение:</strong> <span class="formula">¹⁰₅B + ¹₀n → ⁷₃Li + ᴬ<sub>Z</sub>X</span>. A: <span class="formula">10+1 = 7+A → A=4</span>. Z: <span class="formula">5+0 = 3+Z → Z=2</span>. Х — это гелий <span class="formula">⁴₂He</span>. Число нейтронов <span class="formula">N = 4-2=2</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Элемент Х — гелий (He), число нейтронов — 2</span></li>
+            </ul>
+        </div>
+
+        <!-- ==================== ВАРИАНТ 2 ==================== -->
+        <h2 id="variant-2">Вариант 2</h2>
+        
+        <div class="question-block">
+            <h3>1. Гармонические колебания</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">x = Asin(ωt)</span>. При <span class="formula">φ = π/6</span> смещение <span class="formula">x = 4 см</span>. Найти <span class="formula">A</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">4 = A · sin(π/6) = A · (1/2)</span>. Отсюда <span class="formula">A = 8 см</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">8 см</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>2. Длина звуковой волны</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">ν = 3440 Гц</span>, <span class="formula">V<sub>з</sub> = 340 м/с</span>. Найти <span class="formula">λ</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">λ = V<sub>з</sub> / ν = 340 / 3440 ≈ 0,0988 м ≈ 10 см</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">10 см</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>3. Разность фаз</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">λ = 0,6 мкм</span>, <span class="formula">Δl = 0,3 мкм</span>. Найти <span class="formula">Δφ</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">Δφ = (2π / 0,6) · 0,3 = π</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">п</span></li>
+            </ul>
+        </div>
+
+        <!-- Остальные задачи для Варианта 2 и последующих вариантов добавляются аналогично -->
+        <div class="question-block">
+            <h3>4. Дифракция Френеля на диске</h3>
+            <ul>
+                <li><strong>Условие:</strong> Диск закрывает первую зону Френеля. Найти <span class="formula">I</span>.</li>
+                <li><strong>Решение:</strong> Аналогично задаче 1.4. Диск закрывает <span class="formula">k=1</span> зону. <span class="formula">A ≈ A₂/2 ≈ A₁/2 = A₀</span>. Интенсивность <span class="formula">I ≈ I₀</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Б) I=I₀</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>5. Дифракция на щели</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">λ = 532 нм</span>, <span class="formula">sin(θ) = 10⁻²</span>, <span class="formula">m = 5</span>. Найти <span class="formula">b</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">b = (m · λ) / sin(θ) = (5 · 532·10⁻⁹) / 10⁻² = 2660·10⁻⁷ м = 266 мкм</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">B) b = 266 мкм</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>6. Период дифракционной решетки</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">N₀ = 100</span> на <span class="formula">L = 1 мм</span>. Найти <span class="formula">d</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">d = 1 мм / 100 = 0,01 мм = 10 мкм</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Д) d = 10 мкм</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>7. Закон Малюса</h3>
+            <ul>
+                <li><strong>Условие:</strong> Интенсивность уменьшилась в 2 раза. Найти <span class="formula">α</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">I<sub>ест</sub> / 2 = (I<sub>ест</sub> / 2) · cos²(α) → cos²(α) = 1 → α = 0°</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">A) 0°</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>8. Закон смещения Вина</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">T</span> увеличилась в 1,5 раза. Как изменилась <span class="formula">λ<sub>m</sub></span>?</li>
+                <li><strong>Решение:</strong> <span class="formula">λ<sub>m</sub> · T = const</span>. <span class="formula">λ<sub>m2</sub> = λ<sub>m1</sub> · (T₁ / T₂) = λ<sub>m1</sub> / 1,5</span>. Уменьшилась в 1,5 раза.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Уменьшилась в 1,5 раза</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>9. Перевод эВ в Джоули</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">А<sub>вых</sub> = 4 эВ</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">А<sub>вых</sub> = 4 · (1,6 · 10⁻¹⁹ Дж) = 6,4 · 10⁻¹⁹ Дж</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">A) 6,4·10⁻¹⁹ Дж</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>10. Волна де Бройля</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">m = 1 мг = 10⁻⁶ кг</span>, <span class="formula">V = 100 км/с = 10⁵ м/с</span>. Найти <span class="formula">λ<sub>д</sub></span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">λ<sub>д</sub> = h / (m · V) = (6,63·10⁻³⁴) / (10⁻⁶ · 10⁵) = 6,63·10⁻³³ м</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Д) λ<sub>д</sub> = 6,63·10⁻³³ м</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>11. Радиусы орбит</h3>
+            <ul>
+                <li><strong>Условие:</strong> Переход <span class="formula">n=1 → n=3</span>. Как изменился радиус?</li>
+                <li><strong>Решение:</strong> <span class="formula">r<sub>n</sub> ∝ n²</span>. <span class="formula">r₃ / r₁ = 3² / 1² = 9</span>. Увеличился в 9 раз.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">E) увеличился в 9 раз</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>12. Минимумы вероятности в яме</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">n=2</span>. Найти координаты минимумов.</li>
+                <li><strong>Решение:</strong> Минимумы (узлы) для <span class="formula">n=2</span> находятся на границах <span class="formula">x=0, x=a</span> и в центре <span class="formula">x=a/2</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Г) х₁=0; х₂=a/2; x₃=a</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>13. Вероятность в яме</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">n=3</span>, интервал <span class="formula">(l/6, 2l/3)</span>.</li>
+                <li><strong>Решение:</strong> Вероятность = (правая половина левого "горба") + (центральный "горб") = <span class="formula">(1/3)/2 + 1/3 = 1/6 + 2/6 = 1/2</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">B) 1/2</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>14. Ядерная реакция</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">²³²₉₀Th</span> → 2β⁻ + 1α → X.</li>
+                <li><strong>Решение:</strong> После 1α: <span class="formula">A=228, Z=88</span> (<span class="formula">²²⁸₈₈Ra</span>). После 2β⁻: <span class="formula">A=228, Z=88+2=90</span> (<span class="formula">²²⁸₉₀Th</span>).</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">В) Торий ²²⁸₉₀Th</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>15. Радиоактивный распад</h3>
+            <ul>
+                <li><strong>Условие:</strong> Какая часть распадется за <span class="formula">t = 2T</span>?</li>
+                <li><strong>Решение:</strong> Останется <span class="formula">(1/2)² = 1/4</span>. Распадется <span class="formula">1 - 1/4 = 3/4 = 75%</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Г) 75%</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>16. Ядерная реакция</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">⁴He + n → ³H + X</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">⁴₂He + ¹₀n → ³₁H + ᴬ<sub>Z</sub>X</span>. A: <span class="formula">4+1=3+A → A=2</span>. Z: <span class="formula">2+0=1+Z → Z=1</span>. X — дейтерий <span class="formula">²₁H</span>. Нейтронов: <span class="formula">N=2-1=1</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Элемент Х — дейтерий (²H), 1 нейтрон</span></li>
+            </ul>
+        </div>
+
+        <!-- ==================== ВАРИАНТ 3 ==================== -->
+        <h2 id="variant-3">Вариант 3</h2>
+        
+        <div class="question-block">
+            <h3>1. Гармонические колебания</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">x = Acos(ωt)</span>. При <span class="formula">φ = π/4</span>, <span class="formula">x = √2/2 см</span>. Найти <span class="formula">A</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">√2/2 = A · cos(π/4) = A · (√2/2) → A = 1 см</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">1 см</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>2. Длина звуковой волны</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">ν = 349,23 Гц</span>, <span class="formula">V<sub>з</sub> = 340 м/с</span>. Найти <span class="formula">λ</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">λ = 340 / 349,23 ≈ 0,9735 м ≈ 1 м</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">1 м</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>3. Разность фаз</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">λ = 0,6 мкм</span>, <span class="formula">Δl = 0,1 мкм</span>. Найти <span class="formula">Δφ</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">Δφ = (2π / 0,6) · 0,1 = π/3</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">п/3</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>4. Дифракция Френеля на отверстии</h3>
+            <ul>
+                <li><strong>Условие:</strong> Отверстие открывает 2 зоны Френеля. Найти <span class="formula">I</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">A = A₁ - A₂</span>. Так как <span class="formula">A₁ ≈ A₂</span>, то <span class="formula">A ≈ 0</span>, и <span class="formula">I ≈ 0</span>. В центре будет темное пятно.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">A) I=0</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>5. Дифракция на щели</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">λ = 640 нм</span>, <span class="formula">b = 128 мкм</span>, <span class="formula">θ = 30°</span>. Найти <span class="formula">m</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">m = (b · sinθ) / λ = (128·10⁻⁶ · 0,5) / (640·10⁻⁹) = 100</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Д) m=100</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>6. Период дифракционной решетки</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">N₀ = 250</span> на <span class="formula">1 мм</span>. Найти <span class="formula">d</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">d = 1 мм / 250 = 0,004 мм = 4 мкм</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">B) d = 4 мкм</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>7. Закон Малюса</h3>
+            <ul>
+                <li><strong>Условие:</strong> Интенсивность уменьшилась в 8 раз. Найти <span class="formula">α</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">I<sub>ест</sub> / 8 = (I<sub>ест</sub> / 2) · cos²(α) → cos²(α) = 1/4 → cos(α) = 1/2 → α = 60°</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Г) 60°</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>8. Закон Стефана-Больцмана</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">T</span> уменьшилась в 3 раза. Как изменилась площадь?</li>
+                <li><strong>Решение:</strong> <span class="formula">R ∝ T⁴</span>. <span class="formula">R₂ ∝ (T₁/3)⁴ = R₁/81</span>. Уменьшится в 81 раз.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Уменьшится в 81 раз</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>9. Перевод эВ в Джоули</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">А<sub>вых</sub> = 1 эВ</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">А<sub>вых</sub> = 1 · (1,6 · 10⁻¹⁹ Дж) = 1,6 · 10⁻¹⁹ Дж</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">А) 1,6·10⁻¹⁹ Дж</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>10. Волна де Бройля</h3>
+            <ul>
+                <li><strong>Условие:</strong> Электрон, <span class="formula">λ<sub>д</sub> = 7,37·10⁻⁹ м</span>. Найти <span class="formula">v</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">v = h / (mₑ · λ<sub>д</sub>) ≈ 1·10⁵ м/с = 100 км/с</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Д) 100 км/с</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>11. Радиусы орбит</h3>
+            <ul>
+                <li><strong>Условие:</strong> Переход <span class="formula">n=2 → n=1</span>. Как изменился радиус?</li>
+                <li><strong>Решение:</strong> <span class="formula">r₁ = r₂ / (2²/1²) = r₂/4</span>. Уменьшился в 4 раза.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Д) уменьшился в 4 раза</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>12. Максимумы вероятности в яме</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">n=2</span>. Найти координаты максимумов.</li>
+                <li><strong>Решение:</strong> Для <span class="formula">n=2</span> максимумы находятся в точках <span class="formula">x = a/4</span> и <span class="formula">x = 3a/4</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">B) x₁=a/4; x₂=3a/4</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>13. Вероятность в яме</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">n=3</span>, интервал <span class="formula">(l/3, l)</span>.</li>
+                <li><strong>Решение:</strong> Вероятность = (центральный "горб") + (правый "горб") = <span class="formula">1/3 + 1/3 = 2/3</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Г) 2/3</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>14. Радиоактивные распады</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">²²⁶₈₈Ra → ²⁰⁶₈₂Pb</span>.</li>
+                <li><strong>Решение:</strong> α-распады: <span class="formula">x = (226-206)/4 = 5</span>. β⁻-распады: <span class="formula">88 = 82 + 2·5 - y → y=4</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Д) 5α и 4β</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>15. Радиоактивный распад</h3>
+            <ul>
+                <li><strong>Условие:</strong> Доля нераспавшихся атомов через <span class="formula">t=2T</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">N/N₀ = (1/2)² = 1/4 = 25%</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Б) 25%</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>16. Ядерная реакция</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">¹⁴N + p → ¹³N + X + n</span>.</li>
+                <li><strong>Решение:</strong> Задача, скорее всего, некорректна. Буквальное решение: <span class="formula">¹⁴₇N + ¹₁p → ¹³₇N + ᴬ<sub>Z</sub>X + ¹₀n</span>. A: <span class="formula">15=14+A → A=1</span>. Z: <span class="formula">8=7+Z → Z=1</span>. X — протон <span class="formula">¹₁H</span> (0 нейтронов). Физически некорректно.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Задача некорректна</span></li>
+            </ul>
+        </div>
+        
+        <!-- ==================== ВАРИАНТ 4 ==================== -->
+        <h2 id="variant-4">Вариант 4</h2>
+
+        <div class="question-block">
+            <h3>1. Гармонические колебания</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">x = Asin(ωt)</span>. При <span class="formula">φ = π/4</span>, <span class="formula">x = √2 см</span>. Найти <span class="formula">A</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">√2 = A · sin(π/4) = A · (√2/2) → A = 2 см</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">2 см</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>2. Длина звуковой волны</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">ν = 1720 Гц</span>, <span class="formula">V<sub>з</sub> = 340 м/с</span>. Найти <span class="formula">λ</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">λ = 340 / 1720 ≈ 0,1977 м ≈ 20 см</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">20 см</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>3. Длина волны</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">Δl=0,6 мкм</span>, <span class="formula">Δφ = π</span>. Найти <span class="formula">λ</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">λ = (2π / Δφ) · Δl = (2π / π) · 0,6 = 1,2 мкм</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">1,2 мкм</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>4. Дифракция Френеля на отверстии</h3>
+            <ul>
+                <li><strong>Условие:</strong> Открыты 1,5 зоны Френеля. Найти <span class="formula">I</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">A = A₁ - A₂/2 ≈ A₁ - A₁/2 = A₁/2</span>. Амплитуда от всей волны <span class="formula">A₀ = A₁/2</span>. Значит <span class="formula">A ≈ A₀</span> и <span class="formula">I ≈ I₀</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Б) I=I₀</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>5. Дифракция на щели</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">λ=640 нм</span>, <span class="formula">b=128 мкм</span>, <span class="formula">m=5</span>. Найти <span class="formula">sin(θ)</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">sin(θ) = (m·λ)/b = (5 · 640·10⁻⁹) / (128·10⁻⁶) = 0,025 = 2,5·10⁻²</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Б) sin θ = 2,5·10⁻²</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>6. Период дифракционной решетки</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">N₀ = 5000</span> на <span class="formula">1 мм</span>. Найти <span class="formula">d</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">d = 1 мм / 5000 = 0,0002 мм = 0,2 мкм</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Д) d = 0,2 мкм</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>7. Закон Малюса</h3>
+            <ul>
+                <li><strong>Условие:</strong> Интенсивность уменьшилась в 5 раз. Найти <span class="formula">α</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">I<sub>ест</sub> / 5 = (I<sub>ест</sub> / 2) · cos²(α) → cos²(α) = 2/5 = 0,4</span>. <span class="formula">α ≈ 50,8°</span>. Такого варианта нет.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">E) Нет верного ответа</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>8. Закон смещения Вина</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">λ<sub>m</sub></span> уменьшилась в <span class="formula">√2</span> раз. Как изменилась <span class="formula">T</span>?</li>
+                <li><strong>Решение:</strong> <span class="formula">T₂ = T₁ · (λ<sub>m1</sub> / λ<sub>m2</sub>) = T₁ · √2</span>. Увеличилась в <span class="formula">√2</span> раз.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Увеличилась в √2 раз</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>9. Перевод эВ в Джоули</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">А<sub>вых</sub> = 1,56 эВ</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">А<sub>вых</sub> = 1,56 · (1,6 · 10⁻¹⁹ Дж) ≈ 2,5 · 10⁻¹⁹ Дж</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Д) 2,5·10⁻¹⁹ Дж</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>10. Волна де Бройля</h3>
+            <ul>
+                <li><strong>Условие:</strong> Электрон, <span class="formula">V = 14·10⁴ м/с</span>. Найти <span class="formula">λ<sub>д</sub></span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">λ<sub>д</sub> = h / (mₑ·V) ≈ 5,2·10⁻⁹ м ≈ 5 нм</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Б) 5 нм</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>11. Радиусы орбит</h3>
+            <ul>
+                <li><strong>Условие:</strong> Переход <span class="formula">n=1 → n=2</span>. Как изменился радиус?</li>
+                <li><strong>Решение:</strong> <span class="formula">r₂/r₁ = 2²/1² = 4</span>. Увеличился в 4 раза.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Д) увеличился в 4 раза</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>12. Минимальная вероятность в яме</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">n=1</span>. В каком интервале вероятность минимальна?</li>
+                <li><strong>Решение:</strong> Для <span class="formula">n=1</span> плотность вероятности минимальна у краев. Интервал <span class="formula">[3a/4, a]</span> ближе всего к краю.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">A) [3a/4; a]</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>13. Вероятность в яме</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">n=3</span>, интервал <span class="formula">(l/6, l/2)</span>.</li>
+                <li><strong>Решение:</strong> Вероятность = (правая половина левого "горба") + (левая половина центрального "горба") = <span class="formula">1/6 + 1/6 = 1/3</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Б) 1/3</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>14. Радиоактивные распады</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">²³⁵₉₂U</span> → 2α + 3β⁻ → X.</li>
+                <li><strong>Решение:</strong> После 2α: <span class="formula">A=227, Z=88</span>. После 3β⁻: <span class="formula">A=227, Z=91</span> (<span class="formula">²²⁷₉₁Pa</span>). Такого ответа нет.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Верного ответа нет (должен быть A=227, Z=91)</span></li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>15. Изотоп по рисунку</h3>
+            <ul>
+                <li><strong>Условие:</strong> Определить элемент по рисунку.</li>
+                <li><strong>Решение:</strong> В ядре 8 протонов (синие) и 8 нейтронов (серые). <span class="formula">Z=8</span> — это кислород (O).</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Б) кислорода</span></li>
+            </ul>
+        </div>
+        
+        <div class="question-block">
+            <h3>16. Ядерная реакция</h3>
+            <ul>
+                <li><strong>Условие:</strong> <span class="formula">¹⁴N + n → X + p</span>.</li>
+                <li><strong>Решение:</strong> <span class="formula">¹⁴₇N + ¹₀n → ᴬ<sub>Z</sub>X + ¹₁p</span>. A: <span class="formula">15=A+1 → A=14</span>. Z: <span class="formula">7=Z+1 → Z=6</span>. X — углерод-14 (<span class="formula">¹⁴₆C</span>). Нейтронов: <span class="formula">N=14-6=8</span>.</li>
+                <li><strong>Ответ:</strong> <span class="answer-highlight">Элемент Х — углерод (¹⁴C), 8 нейтронов</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
