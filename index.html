@@ -51,7 +51,7 @@
 
         /* --- Основной контейнер --- */
         .container {
-            max-width: 1280px;
+            max-width: 960px;
             margin: 0 auto;
             background-color: #ffffff;
             padding: 20px 30px;
@@ -127,6 +127,42 @@
             font-size: 0.95em;
         }
 
+        /* --- Раздел с формулами --- */
+        .formulas-section {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #eaf2f8;
+            border: 1px solid #d4e6f1;
+            border-radius: 10px;
+        }
+
+        .formulas-section h2 {
+            border-bottom-color: #aed6f1;
+        }
+
+        .formula-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+        }
+
+        .formula-name {
+            font-weight: bold;
+            color: #2c3e50;
+            flex-basis: 30%;
+            min-width: 180px;
+        }
+
+        .formula-expression {
+            font-family: "Georgia", "Times New Roman", serif;
+            font-size: 1.2em;
+            color: #c0392b;
+            flex-grow: 1;
+        }
+
         /* --- Адаптивный дизайн для телефонов --- */
         @media (max-width: 768px) {
             body {
@@ -153,13 +189,17 @@
             
             .nav-button {
                 padding: 8px 15px;
-                margin: 5px 3px;
+                margin: 0 3px;
                 font-size: 0.9em;
             }
-            .navigation-bar{
-                display:flex;
-                flex-wrap:wrap;
-                justify-content: center;
+
+            .formula-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .formula-name {
+                margin-bottom: 5px;
             }
         }
     </style>
@@ -171,6 +211,7 @@
         <a href="#variant-2" class="nav-button">Вариант 2</a>
         <a href="#variant-3" class="nav-button">Вариант 3</a>
         <a href="#variant-4" class="nav-button">Вариант 4</a>
+        <a href="#formulas" class="nav-button">Формулы</a>
     </div>
 
     <div class="container">
@@ -763,6 +804,62 @@
                 <li><strong>Решение:</strong> <span class="formula">¹⁴₇N + ¹₀n → ᴬ<sub>Z</sub>X + ¹₁p</span>. A: <span class="formula">15=A+1 → A=14</span>. Z: <span class="formula">7=Z+1 → Z=6</span>. X — углерод-14 (<span class="formula">¹⁴₆C</span>). Нейтронов: <span class="formula">N=14-6=8</span>.</li>
                 <li><strong>Ответ:</strong> <span class="answer-highlight">Элемент Х — углерод (¹⁴C), 8 нейтронов</span></li>
             </ul>
+        </div>
+
+        <!-- ==================== ФОРМУЛЫ ==================== -->
+        <div class="formulas-section">
+            <h2 id="formulas">Основные формулы</h2>
+            
+            <div class="formula-item">
+                <div class="formula-name">Закон Стефана-Больцмана:</div>
+                <div class="formula-expression">R = σT⁴</div>
+            </div>
+            
+            <div class="formula-item">
+                <div class="formula-name">Закон смещения Вина:</div>
+                <div class="formula-expression">λ<sub>max</sub> · T = b</div>
+            </div>
+
+            <div class="formula-item">
+                <div class="formula-name">Разность фаз:</div>
+                <div class="formula-expression">Δφ = (2π / λ) · Δl</div>
+            </div>
+
+            <div class="formula-item">
+                <div class="formula-name">Закон радиоактивного распада:</div>
+                <div class="formula-expression">N(t) = N₀ · (1/2)<sup>t/T</sup></div>
+            </div>
+
+            <div class="formula-item">
+                <div class="formula-name">Альфа-распад (α-распад):</div>
+                <div class="formula-expression"><sup>A</sup><sub>Z</sub>X → <sup>A-4</sup><sub>Z-2</sub>Y + <sup>4</sup><sub>2</sub>He</div>
+            </div>
+
+            <div class="formula-item">
+                <div class="formula-name">Бета-распад (β⁻-распад):</div>
+                <div class="formula-expression"><sup>A</sup><sub>Z</sub>X → <sup>A</sup><sub>Z+1</sub>Y + <sup>0</sup><sub>-1</sub>e + ν̅<sub>e</sub></div>
+            </div>
+
+            <div class="formula-item">
+                <div class="formula-name">Волна де Бройля:</div>
+                <div class="formula-expression">λ = h / p = h / (mv)</div>
+            </div>
+
+            <div class="formula-item">
+                <div class="formula-name">Закон Малюса:</div>
+                <div class="formula-expression">I = I₀ · cos²(α)</div>
+            </div>
+            
+            <div class="formula-item">
+                <div class="formula-name">Дифракция на щели (условие минимума):</div>
+                <div class="formula-expression">b · sin(θ) = mλ</div>
+            </div>
+            
+            <div class="formula-item">
+                <div class="formula-name">Формула для звуковой волны:</div>
+                <div class="formula-expression">λ = v / ν</div>
+            </div>
+
         </div>
     </div>
 </body>
